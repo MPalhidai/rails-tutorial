@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+  root 'static_pages#home'
+
+  get '/help', to: 'static_pages#help'
+
+  get 'static_pages/help'
+
+  get 'static_pages/about'
+
   get 'users/new'
 
   get    '/login',   to: 'sessions#new'
